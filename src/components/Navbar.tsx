@@ -60,13 +60,7 @@ const Navbar: React.FC = () => {
           {/* Profile */}
           <div className="flex items-center gap-3 bg-[#45475f] px-3 py-1 rounded-md hover:bg-[#4a4d62]">
             <div className="relative w-10 h-10">
-              <Image
-                src="/file.svg"
-                alt="avatar"
-                fill
-                sizes="40px"
-                className="rounded-full object-cover"
-              />
+              <Image src="https://placehold.co/40x40" alt="Avatar" width={40} height={40} className="object-cover rounded-full" unoptimized />             
               <span className="absolute bottom-0 right-0 w-3.5 h-3.5 bg-[#2ecc71] border-2 border-[#45475f] rounded-full" />
             </div>
             <div className="text-left text-gray-100">
