@@ -8,23 +8,23 @@ export default function SocialPostComponent() {
   const [postContent, setPostContent] = useState('');
 
   const tabs = [
-    { id: 'status', label: 'Status', icon: MessageSquare, color: 'text-orange-500' },
+    { id: 'status', label: 'Estado', icon: MessageSquare, color: 'text-orange-500' },
     { id: 'multimedia', label: 'Multimedia', icon: ImageIcon, color: 'text-gray-400' },
-    { id: 'blog', label: 'Blog Post', icon: FileText, color: 'text-gray-400' }
+    { id: 'blog', label: 'Entrada de blog', icon: FileText, color: 'text-gray-400' }
   ];
 
   const handleSubmit = () => {
     // Lógica para enviar el post
-    console.log('Posting:', postContent);
+    console.log('Publicando:', postContent);
   };
 
   const handlePreview = () => {
     // Lógica para previsualizar
-    console.log('Previewing:', postContent);
+    console.log('Previsualizando:', postContent);
   };
 
   return (
-    <div className="max-w-[618px] mx-auto bg-white border border-gray-200 p-6">
+    <div className="max-w-[618px] mx-auto bg-white border border-gray-200 p-6 rounded-sm overflow-hidden">
       {/* Tabs */}
       <div className="-mx-6 -mt-6 mb-6">
         <div className="flex items-center bg-gray-100">

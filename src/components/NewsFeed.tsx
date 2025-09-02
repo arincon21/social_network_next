@@ -24,32 +24,32 @@ const posts: Post[] = [
   {
     id: 1,
     author: { name: 'Elaine Dreyfuss', avatar: 'https://placehold.co/48x48' },
-    timeAgo: '9 hours ago',
+    timeAgo: 'hace 9 horas',
     content:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempo incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris consequat.',
     image: 'https://placehold.co/600x800',
-    likes: { count: 24, users: ['You', 'Elaine'] },
+    likes: { count: 24, users: ['Tú', 'Elaine'] },
     comments: 17,
     shares: 24,
     commentsList: [
       {
         id: 1,
         author: { name: 'James Spiegel', avatar: 'https://placehold.co/36x36' },
-        content: 'Nice post! I agree with most of this.',
-        timeAgo: '2 hours ago',
+        content: '¡Buena publicación! Estoy de acuerdo con la mayor parte de esto.',
+        timeAgo: 'hace 2 horas',
       },
       {
         id: 2,
         author: { name: 'Mathilda Brinker', avatar: 'https://placehold.co/36x36' },
-        content: 'Good point — thanks for sharing.',
-        timeAgo: '1 hour ago',
+        content: 'Buen punto, gracias por compartir.',
+        timeAgo: 'hace 1 hora',
       },
     ],
   },
   {
     id: 2,
     author: { name: 'James Spiegel', avatar: 'https://placehold.co/48x48' },
-    timeAgo: '38 mins ago',
+    timeAgo: 'hace 38 minutos',
     content: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium der doloremque laudantium.',
     likes: { count: 3, users: [] },
     comments: 3,
@@ -58,15 +58,15 @@ const posts: Post[] = [
       {
         id: 3,
         author: { name: 'Elaine Dreyfuss', avatar: 'https://placehold.co/36x36' },
-        content: 'Reply',
-        timeAgo: '30 mins ago',
+        content: 'Respuesta',
+        timeAgo: 'hace 30 minutos',
       },
     ],
   },
   {
     id: 3,
     author: { name: 'Mathilda Brinker', avatar: 'https://placehold.co/48x48' },
-    timeAgo: '1 hour ago',
+    timeAgo: 'hace 1 hora',
     content:
       'Ratione voluptatem sequi en lod nesciunt. Neque porro quisquam est, quinder dolorem ipsum quia dolor sit amet, consectetur adipisci velit en lorem ipsum duis aute irure dolor in reprehenderit in voluptate velit esse cillum.',
     likes: { count: 8, users: [] },
@@ -79,7 +79,7 @@ const NewsFeed = () => {
   return (
     <div className='mb-[80px]'>
       {posts.map((post, idx) => (
-        <div key={post.id} className={`relative bg-white border border-[#e6eef5] mt-[30px] max-w-[618px] mx-auto`}>
+        <div key={post.id} className={`relative bg-white border border-[#e6eef5] mt-[30px] max-w-[618px] mx-auto rounded-sm`}>
 
           <div className='p-6'>
             {/* Botones flotantes derecha */}
@@ -142,7 +142,7 @@ const NewsFeed = () => {
                     <Heart className="w-4 h-4 text-[#9aa3b2]" />
                     <span className="ml-2 text-sm text-gray-500">{post.likes.count}</span>
                   </div>
-                  <div className="text-xs text-gray-400 mt-1">You, Elaine and <span className="text-gray-500">{Math.max(0, post.likes.count - 2)} more liked this</span></div>
+                  <div className="text-xs text-gray-400 mt-1">A ti, a Elaine y a <span className="text-gray-500">{Math.max(0, post.likes.count - 2)} más les gusta esto</span></div>
                 </div>
               </div>
 
@@ -185,7 +185,7 @@ const NewsFeed = () => {
                       <Heart className="w-4 h-4 text-[#9aa3b2]" />
                       <span className="ml-2 text-sm text-gray-500">{post.likes.count}</span>
                     </div>
-                    <div className="text-xs text-gray-400">You, Elaine and <span className="text-gray-500">{Math.max(0, post.likes.count - 2)} more liked this</span></div>
+                    <div className="text-xs text-gray-400">A ti, a Elaine y a <span className="text-gray-500">{Math.max(0, post.likes.count - 2)} más les gusta esto</span></div>
                   </div>
                 </div>
               ))}
@@ -193,7 +193,7 @@ const NewsFeed = () => {
               {post.commentsList.length >= 2 && (
                 <>
                   <div className="p-3 text-center cursor-pointer border-b border-gray-300">
-                    <span className="text-xs text-gray-500 font-medium">View more comments +</span>
+                    <span className="text-xs text-gray-500 font-medium">Ver más comentarios +</span>
                   </div>
                   <div className="p-6">
                     <div className="bg-white">
@@ -203,15 +203,15 @@ const NewsFeed = () => {
                         </div>
                         <div className="flex-1">
                           <div className="border rounded-md border-[#eef3f6] p-3 flex items-center">
-                            <input className="flex-1 text-sm text-gray-600 placeholder-gray-400 bg-transparent outline-none" placeholder="Write a comment..." />
+                            <input className="flex-1 text-sm text-gray-600 placeholder-gray-400 bg-transparent outline-none" placeholder="Escribe un comentario..." />
                             <button className="ml-2 text-gray-400">
                               <MessageSquare className="w-5 h-5" />
                             </button>
                           </div>
 
                           <div className="mt-4 flex justify-end items-center space-x-4">
-                            <button className="px-4 py-2 border border-[#e6eef5] rounded-md text-sm text-gray-500">Cancel</button>
-                            <button className="px-4 py-2 bg-[#ff6b4a] text-white rounded-md text-sm">Post Comment</button>
+                            <button className="px-4 py-2 border border-[#e6eef5] rounded-md text-sm text-gray-500">Cancelar</button>
+                            <button className="px-4 py-2 bg-[#ff6b4a] text-white rounded-md text-sm">Publicar comentario</button>
                           </div>
                         </div>
                       </div>

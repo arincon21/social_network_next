@@ -1,19 +1,19 @@
 import { Cloud, CloudRain, Sun, Wind, MoreHorizontal } from 'lucide-react';
 
-const WeatherComponent = () => {
+const RenderWeatherIcon = () => {
   const weeklyForecast = [
-    { day: 'SUN', icon: Sun, temp: '60°', isToday: true },
-    { day: 'MON', icon: Cloud, temp: '58°' },
-    { day: 'TUE', icon: CloudRain, temp: '67°' },
-    { day: 'WED', icon: CloudRain, temp: '70°' },
-    { day: 'THU', icon: CloudRain, temp: '58°' },
-    { day: 'FRI', icon: CloudRain, temp: '68°' },
-    { day: 'SAT', icon: Wind, temp: '65°' },
+    { day: 'DOM', icon: Sun, temp: '60°', isToday: true },
+    { day: 'LUN', icon: Cloud, temp: '58°' },
+    { day: 'MAR', icon: CloudRain, temp: '67°' },
+    { day: 'MIÉ', icon: CloudRain, temp: '70°' },
+    { day: 'JUE', icon: CloudRain, temp: '58°' },
+    { day: 'VIE', icon: CloudRain, temp: '68°' },
+    { day: 'SÁB', icon: Wind, temp: '65°' },
   ];
 
   return (
     <div>
-      <div className="bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 p-6 text-white relative">
+      <div className="bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 p-6 text-white relative rounded-sm">
         {/* Background decorative elements */}
         <div className="absolute top-0 left-0 w-full h-full opacity-10">
           <div className="absolute top-8 left-8 w-32 h-32 bg-white rounded-full blur-3xl"></div>
@@ -56,10 +56,10 @@ const WeatherComponent = () => {
 
         {/* Current conditions */}
         <div className="relative z-10 mb-8">
-          <h2 className="text-2xl font-light mb-3">Partly Sunny</h2>
+          <h2 className="text-2xl font-light mb-3">Parcialmente Soleado</h2>
           <div className="flex justify-between text-sm opacity-90">
-            <span>Real Feel: 67°</span>
-            <span>Chance of Rain: 49%</span>
+            <span>Sensación térmica: 67°</span>
+            <span>Probabilidad de lluvia: 49%</span>
           </div>
         </div>
 
@@ -98,7 +98,7 @@ const WeatherComponent = () => {
 
         {/* Date and location */}
         <div className="relative z-10 text-center">
-          <h3 className="text-xl font-light mb-1">Saturday, March 26th</h3>
+          <h3 className="text-xl font-light mb-1">Sábado, 26 de marzo</h3>
           <p className="text-sm opacity-75">San Francisco, CA</p>
         </div>
       </div>
@@ -106,4 +106,4 @@ const WeatherComponent = () => {
   );
 };
 
-export default WeatherComponent;
+export default RenderWeatherIcon;

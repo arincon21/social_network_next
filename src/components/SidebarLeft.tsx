@@ -23,16 +23,16 @@ const SidebarLeft: React.FC = () => {
   const [showLabels, setShowLabels] = useState(false);
 
   const items = [
-    { key: "newsfeed", icon: FileText, label: "Newsfeed" },
-    { key: "fav", icon: Star, label: "Fav Pages Feed" },
-    { key: "groups", icon: Users, label: "Friend Groups" },
-    { key: "music", icon: Headphones, label: "Music & Playlists" },
-    { key: "weather", icon: Cloud, label: "Weather App" },
-    { key: "calendar", icon: Calendar, label: "Calendar and Events" },
-    { key: "badges", icon: Target, label: "Community Badges" },
-    { key: "birthdays", icon: Gift, label: "Friends Birthdays" },
-    { key: "stats", icon: Activity, label: "Account Stats" },
-    { key: "widgets", icon: Grid, label: "Manage Widgets" },
+    { key: "newsfeed", icon: FileText, label: "Noticias" },
+    { key: "fav", icon: Star, label: "Páginas favoritas" },
+    { key: "groups", icon: Users, label: "Grupos de amigos" },
+    { key: "music", icon: Headphones, label: "Música y listas de reproducción" },
+    { key: "weather", icon: Cloud, label: "Aplicación del tiempo" },
+    { key: "calendar", icon: Calendar, label: "Calendario y eventos" },
+    { key: "badges", icon: Target, label: "Insignias de la comunidad" },
+    { key: "birthdays", icon: Gift, label: "Cumpleaños de amigos" },
+    { key: "stats", icon: Activity, label: "Estadísticas de la cuenta" },
+    { key: "widgets", icon: Grid, label: "Administrar widgets" },
   ];
 
   // Read persisted preference on mount
@@ -101,7 +101,7 @@ const SidebarLeft: React.FC = () => {
             className={`ml-2 text-sm font-semibold transform transition-all duration-200 overflow-hidden whitespace-nowrap ${showLabels ? "opacity-100 max-w-[200px]" : "opacity-0 max-w-0"
               }`}
           >
-            {showLabels ? "Collapse Menu" : ""}
+            {showLabels ? "Contraer menú" : ""}
           </span>
         </button>
 
@@ -131,15 +131,15 @@ const SidebarLeft: React.FC = () => {
       {showLabels && (
         <div className={`absolute bottom-6 left-0 right-0 px-4 ${collapsed ? "text-center" : "text-left"}`}>
           <div className="mb-3 flex items-center justify-between text-sm text-[#6b6f8a]">
-            <span>Profile Completion</span>
+            <span>Perfil completado</span>
             <span className="font-semibold">76%</span>
           </div>
           <div className={`w-full bg-[#f1f2f6] rounded-full h-2 overflow-hidden ${collapsed ? "mx-auto w-8" : ""}`}>
             <div className="bg-[#ff5e3a] h-2 rounded-full" style={{ width: "76%" }} />
           </div>
           <p className="mt-3 text-sm text-[#9aa0b3]">
-            Complete <span className="text-[#ff5e3a] font-medium">your profile</span> so people can
-            know more about you!
+            Completa <span className="text-[#ff5e3a] font-medium">tu perfil</span> para que la gente pueda
+            saber más de ti!
           </p>
         </div>
       )}
