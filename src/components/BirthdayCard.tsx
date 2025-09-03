@@ -5,7 +5,7 @@ export default function BirthdayCard({
   profileImage = "/api/placeholder/60/60" 
 }) {
   return (
-    <div className="max-w-md mx-auto bg-gradient-to-br from-purple-500 to-purple-700 p-8 text-white rounded-sm">
+    <div className="max-w-md mx-auto p-8 text-white rounded-sm" style={{ backgroundImage: `url('/assets/bg/bg-birthdays.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
       {/* Encabezado con ícono de corona y menú */}
       <div className="flex justify-between items-start mb-8">
         <Cake className="w-8 h-8 text-white" />

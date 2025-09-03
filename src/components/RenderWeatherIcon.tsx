@@ -13,7 +13,7 @@ const RenderWeatherIcon = () => {
 
   return (
     <div>
-      <div className="bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 p-6 text-white relative rounded-sm">
+      <div className="bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 p-6 text-white relative rounded-sm" style={{ backgroundImage: `url('/assets/bg/bg-wethear.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         {/* Background decorative elements */}
         <div className="absolute top-0 left-0 w-full h-full opacity-10">
           <div className="absolute top-8 left-8 w-32 h-32 bg-white rounded-full blur-3xl"></div>
