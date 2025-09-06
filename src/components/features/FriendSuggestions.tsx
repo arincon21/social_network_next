@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React from 'react';
 import { MoreHorizontal, UserPlus, Smile } from 'lucide-react';
@@ -10,28 +10,11 @@ interface Friend {
   mutualFriends: number;
 }
 
-const FriendSuggestions: React.FC = () => {
-  const friends: Friend[] = [
-    {
-      id: 1,
-      name: 'Francine Smith',
-      avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Francine&backgroundColor=b6e3f4',
-      mutualFriends: 8
-    },
-    {
-      id: 2,
-      name: 'Hugh Wilson',
-      avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Hugh&backgroundColor=c0aede',
-      mutualFriends: 6
-    },
-    {
-      id: 3,
-      name: 'Karen Masters',
-      avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Karen&backgroundColor=d1d4f9',
-      mutualFriends: 6
-    }
-  ];
+interface FriendSuggestionsProps {
+  friends: Friend[];
+}
 
+const FriendSuggestions: React.FC<FriendSuggestionsProps> = ({ friends }) => {
   return (
     <div className="w-full max-w-md bg-white border border-gray-100 rounded-sm">
       {/* Header */}

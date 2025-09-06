@@ -63,3 +63,24 @@ export const messages = [
       avatar: 'https://placehold.co/48x48',
     },
   ];
+
+  export const suggestedFriends = [
+    {
+      id: 1,
+      name: 'Francine Smith',
+      avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Francine&backgroundColor=b6e3f4',
+      mutualFriends: 8
+    },
+    {
+      id: 2,
+      name: 'Hugh Wilson',
+      avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Hugh&backgroundColor=c0aede',
+      mutualFriends: 6
+    },
+    {
+      id: 3,
+      name: 'Karen Masters',
+      avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Karen&backgroundColor=d1d4f9',
+      mutualFriends: 6
+    }
+  ];

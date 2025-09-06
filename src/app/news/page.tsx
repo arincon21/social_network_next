@@ -4,6 +4,7 @@ import NewsFeed from "@/components/features/NewsFeed";
 import RenderWeatherIcon from "@/components/features/RenderWeatherIcon";
 import SocialPostComponent from "@/components/features/SocialPostComponent";
 import FriendSuggestions from "@/components/features/FriendSuggestionsWrapper";
+import { suggestedFriends } from "@/lib/placeholder-data";
 
 export default function NewsPage() {
     return (
@@ -18,9 +19,8 @@ export default function NewsPage() {
             </div>
             <div className='w-[293px] flex flex-col gap-7'>
                 <BirthdayCard name="Jane Doe" profileImage="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=60&h=60&fit=crop&crop=face" />
-                <FriendSuggestions />
+                <FriendSuggestions friends={suggestedFriends} />
             </div>
         </div>
     );
 }
-
