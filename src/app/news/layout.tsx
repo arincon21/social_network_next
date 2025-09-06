@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import "../../styles/globals.css";
-import Navbar from "@/components/Navbar";
-import SidebarRight from "@/components/SidebarRight";
-import SidebarLeft from "@/components/SidebarLeft";
-import ScrollToTopButton from "@/components/ScrollToTopButton";
+import Navbar from "@/components/layout/Navbar";
+import SidebarRight from "@/components/layout/SidebarRight";
+import SidebarLeft from "@/components/layout/SidebarLeft";
+import ScrollToTopButton from "@/components/features/ScrollToTopButton";
 
 
 export const metadata: Metadata = {
@@ -17,8 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
-      <body className="bg-[#edf2f6]">
+      <div className="bg-[#edf2f6]">
         <Navbar />
         <SidebarRight />
         <SidebarLeft />
@@ -28,7 +27,6 @@ export default function RootLayout({
           </div>
         </div>
         <ScrollToTopButton />
-      </body>
-    </html>
+      </div>
   );
 }

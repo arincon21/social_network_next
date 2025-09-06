@@ -1,9 +1,9 @@
-import BirthdayCard from "@/components/BirthdayCard";
-import CalendarWidget from "@/components/CalendarWidget";
-import FriendSuggestions from "@/components/FriendSuggestions";
-import NewsFeed from "@/components/NewsFeed";
-import RenderWeatherIcon from "@/components/RenderWeatherIcon";
-import SocialPostComponent from "@/components/SocialPostComponent";
+import BirthdayCard from "@/components/features/BirthdayCard";
+import CalendarWidget from "@/components/features/CalendarWidget";
+import NewsFeed from "@/components/features/NewsFeed";
+import RenderWeatherIcon from "@/components/features/RenderWeatherIcon";
+import SocialPostComponent from "@/components/features/SocialPostComponent";
+import FriendSuggestions from "@/components/features/FriendSuggestionsWrapper";
 
 export default function NewsPage() {
     return (
@@ -23,3 +23,4 @@ export default function NewsPage() {
         </div>
     );
 }
+

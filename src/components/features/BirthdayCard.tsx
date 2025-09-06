@@ -1,11 +1,19 @@
 import { MoreHorizontal, Cake } from "lucide-react";
+import Image from 'next/image';
 
 export default function BirthdayCard({ 
   name = "Marina Valentine", 
   profileImage = "/api/placeholder/60/60" 
 }) {
   return (
-    <div className="max-w-md mx-auto p-8 text-white rounded-sm" style={{ backgroundImage: `url('/assets/bg/bg-birthdays.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <div className="relative max-w-md mx-auto p-8 text-white rounded-sm overflow-hidden" style={{ backgroundImage: `url('/assets/bg/bg-birthdays.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <Image
+        src="/assets/bg/bg-birthdays.jpg"
+        alt="Fondo de cumpleaños"
+        layout="fill"
+        objectFit="cover"
+        className="-z-10"
+      />
       {/* Encabezado con ícono de corona y menú */}
       <div className="flex justify-between items-start mb-8">
         <Cake className="w-8 h-8 text-white" />
@@ -14,11 +22,13 @@ export default function BirthdayCard({
 
       {/* Foto de perfil */}
       <div className="mb-6">
-        <div className="w-16 h-16 rounded-full border-3 border-white/30 overflow-hidden">
-          <img 
+        <div className="w-16 h-16 rounded-full border-3 border-white/30 overflow-hidden relative">
+          <Image 
             src={profileImage} 
             alt={`foto de perfil de ${name}`}
-            className="w-full h-full object-cover"
+            layout="fill"
+            objectFit="cover"
+            unoptimized
           />
         </div>
       </div>
